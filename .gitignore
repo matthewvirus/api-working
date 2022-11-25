@@ -28,3 +28,6 @@ build/
 
 ### Maven ###
 .mvn/wrapper/maven-wrapper.jar
+
+### Properties ###
+src/main/resources/dev.properties
