@@ -9,7 +9,7 @@
 <header class="d-flex flex-wrap justify-content-center py-3 bg-dark">
     <jsp:include page="header.jsp"/>
 </header>
-<section class="vh-100" style="background-color: #4B515D;">
+<section style="background-color: #4B515D; height: 90%;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-8 col-lg-6 col-xl-4">
