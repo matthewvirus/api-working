@@ -29,7 +29,6 @@ public class WeatherInfoServlet extends HttpServlet {
             Properties prop = new Properties();
             prop.load(input);
             key = prop.getProperty("apiKey");
-            System.out.println(key);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -95,7 +94,8 @@ public class WeatherInfoServlet extends HttpServlet {
                 (Double) mainWeatherObject.get("feels_like"),
                 (Long) mainWeatherObject.get("humidity"),
                 (Long) mainWeatherObject.get("pressure"),
-                (String) additionalWeatherObject.get("main")
+                (String) additionalWeatherObject.get("main"),
+                (String) additionalWeatherObject.get("icon")
         );
     }
 }

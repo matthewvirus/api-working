@@ -15,6 +15,7 @@ public class WeatherBean implements Serializable {
     private long humidity;
     private long pressure;
     private String weatherType;
+    private String iconId;
 
     public WeatherBean() {
         this.cityName = "";
@@ -23,15 +24,33 @@ public class WeatherBean implements Serializable {
         this.humidity = 0L;
         this.pressure = 0L;
         this.weatherType = "";
+        this.iconId = "";
     }
 
-    public WeatherBean(String cityName, double averageTemperature, double feelsLikeTemperature, long humidity, long pressure, String weatherType) {
+    public WeatherBean(
+            String cityName,
+            double averageTemperature,
+            double feelsLikeTemperature,
+            long humidity,
+            long pressure,
+            String weatherType,
+            String iconId
+    ) {
         this.cityName = cityName;
         this.averageTemperature = averageTemperature;
         this.feelsLikeTemperature = feelsLikeTemperature;
         this.humidity = humidity;
         this.pressure = pressure;
         this.weatherType = weatherType;
+        this.iconId = iconId;
+    }
+
+    public String getIconId() {
+        return iconId;
+    }
+
+    public void setIconId(String iconId) {
+        this.iconId = iconId;
     }
 
     public String getCityName() {
@@ -87,23 +106,11 @@ public class WeatherBean implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         WeatherBean that = (WeatherBean) o;
-        return Double.compare(that.averageTemperature, averageTemperature) == 0 && Double.compare(that.feelsLikeTemperature, feelsLikeTemperature) == 0 && humidity == that.humidity && pressure == that.pressure && Objects.equals(cityName, that.cityName) && Objects.equals(weatherType, that.weatherType);
+        return Double.compare(that.averageTemperature, averageTemperature) == 0 && Double.compare(that.feelsLikeTemperature, feelsLikeTemperature) == 0 && humidity == that.humidity && pressure == that.pressure && Objects.equals(cityName, that.cityName) && Objects.equals(weatherType, that.weatherType) && Objects.equals(iconId, that.iconId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cityName, averageTemperature, feelsLikeTemperature, humidity, pressure, weatherType);
-    }
-
-    @Override
-    public String toString() {
-        return "WeatherBean{" +
-                "cityName='" + cityName + '\'' +
-                ", averageTemperature=" + averageTemperature +
-                ", feelsLikeTemperature=" + feelsLikeTemperature +
-                ", humidity=" + humidity +
-                ", pressure=" + pressure +
-                ", weatherType='" + weatherType + '\'' +
-                '}';
+        return Objects.hash(cityName, averageTemperature, feelsLikeTemperature, humidity, pressure, weatherType, iconId);
     }
 }
