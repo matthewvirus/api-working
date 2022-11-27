@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Weather.io</title>
@@ -15,11 +15,11 @@
             <div class="col-md-8 col-lg-6 col-xl-4">
                 <form method="post" action='<c:url value="weather"/>'>
                     <div class="form-group mb-3">
-                        <label for="city" class="mb-1" style="color: white">City or country</label>
+                        <label for="city" class="mb-1 fs-4" style="color: white">City or country</label>
                         <input type="search" class="form-control" id="city" name="city" placeholder="Name">
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-center">
-                        <button type="submit" class="btn" style="background-color: black; color: white;">Search!</button>
+                        <button type="submit" class="btn fs-5" style="background-color: black; color: white;">Search!</button>
                     </div>
                 </form>
             </div>
